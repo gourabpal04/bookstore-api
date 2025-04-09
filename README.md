@@ -29,29 +29,33 @@ git clone https://github.com/your-username/bookstore-api.git
 cd bookstore-api
 ```
 
-2. Set up Environment Variables
+### 2. Set up Environment Variables
 ```bash
 cp .env.example .env
 ```
+### 3. Start with Docker
 
 ```bash
-3. Start with Docker
 docker-compose up --build
 ```
 
-```bash
-4. Run Migrations
+### 4. Run Migrations
 
+```bash
 npx prisma migrate dev --name init
 ```
+### 5. Access API
+
 ```bash
-5. Access API
+
 API: http://localhost:3000
 
 Swagger: http://localhost:3000/api
 ```
+
+### ✅ API Endpoints
 ```bash
-✅ API Endpoints
+
 POST /auth/signup
 
 POST /auth/login
@@ -68,18 +72,25 @@ DELETE /books/:id
 
 Supports query filters: ?author=...&category=...&rating=...&search=...
 ```
+### 🧪 Running Tests
 ```bash
-🧪 Running Tests
+
 
 npm run test:e2e
 ```
+### 🐳 Docker Commands
 ```bash
-🐳 Docker Commands
+
 
 docker-compose up --build
 docker-compose down
 ```
+
+###📬 Contact
+
 ```bash
-📬 Contact
 Feel free to reach out if you have any questions or feedback.
+
+- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/your-profile)
+
 ```
