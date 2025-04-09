@@ -91,6 +91,6 @@ docker-compose down
 ```bash
 Feel free to reach out if you have any questions or feedback.
 
-- LinkedIn: https://www.linkedin.com/in/gourab-pal-828078248
+LinkedIn: https://www.linkedin.com/in/gourab-pal-828078248
 
 ```
