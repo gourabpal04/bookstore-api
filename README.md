@@ -27,26 +27,30 @@ A secure and scalable RESTful API built with NestJS, Prisma, and PostgreSQL.
 ```bash
 git clone https://github.com/your-username/bookstore-api.git
 cd bookstore-api
+```
+
 2. Set up Environment Variables
-bash
-Copy
-Edit
+```bash
 cp .env.example .env
+```
+
+```bash
 3. Start with Docker
-bash
-Copy
-Edit
 docker-compose up --build
+```
+
+```bash
 4. Run Migrations
-bash
-Copy
-Edit
+
 npx prisma migrate dev --name init
+```
+```bash
 5. Access API
 API: http://localhost:3000
 
 Swagger: http://localhost:3000/api
-
+```
+```bash
 ✅ API Endpoints
 POST /auth/signup
 
@@ -63,17 +67,19 @@ PATCH /books/:id
 DELETE /books/:id
 
 Supports query filters: ?author=...&category=...&rating=...&search=...
-
+```
+```bash
 🧪 Running Tests
-bash
-Copy
-Edit
+
 npm run test:e2e
+```
+```bash
 🐳 Docker Commands
-bash
-Copy
-Edit
+
 docker-compose up --build
 docker-compose down
+```
+```bash
 📬 Contact
 Feel free to reach out if you have any questions or feedback.
+```
