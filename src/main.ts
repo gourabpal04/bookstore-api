@@ -1,24 +1,26 @@
 import { ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { HttpExceptionFilter } from './common/filters/http-exception.filter';
+import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors();
+  app.useGlobalPipes(new ValidationPipe({ whitelist: true, forbidNonWhitelisted: true }));
 
-  app.useGlobalPipes(
-    new ValidationPipe({
-      whitelist: true,
-      forbidNonWhitelisted: true,
-      transform: true,
-    }),
-  );
+  const config = new DocumentBuilder()
+    .setTitle('Bookstore API')
+    .setDescription('API documentation for the Bookstore application')
+    .setVersion('1.0')
+    .addBearerAuth()
+    .build();
 
-  app.useGlobalFilters(new HttpExceptionFilter());
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('api', app, document);
 
-  await app.listen(3000);
-  console.log('🚀 Application is running on: http://localhost:3000');
+  const PORT = process.env.PORT || 3000;
+  await app.listen(PORT);
+  console.log(`🚀 App running on http://localhost:${PORT}`);
 }
 bootstrap();
