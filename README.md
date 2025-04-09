@@ -91,6 +91,6 @@ docker-compose down
 ```bash
 Feel free to reach out if you have any questions or feedback.
 
-- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/your-profile)
+- LinkedIn: [Your LinkedIn Profile]([https://www.linkedin.com/in/your-profile](https://www.linkedin.com/in/gourab-pal-828078248/))
 
 ```
